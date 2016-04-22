@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-controller="CtrlApp">
+    <input type="text" ng-model="nome" ng-change="loggar()">
+
+    <h1>{{nome}}</h1>
+</div>
+
+<script>
+  angular.module('app', [])
+          .controller('CtrlApp', function ($scope) {
+                $scope.nome = "Glaicon";
+                $scope.loggar = function () {
+                    alert('Teste');
+                };
+            });
+</script>
+
+</body>
+</html>

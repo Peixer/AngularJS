@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-controller="CtrlApp">
+    <h1>{{nome}}</h1>
+</div>
+
+<script>
+    var myApp = angular.module('app', []);
+
+    var CtrlApp = function ($scope) {
+        $scope.nome = "Glaicon";
+        $scope.$watch('nome', function () {
+            alert('Oi ' + $scope.nome);
+        });
+    };
+
+    myApp.controller('CtrlApp', CtrlApp);
+</script>
+
+</body>
+</html>

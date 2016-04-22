@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-controller="CtrlApp">
+    <input type="text" ng-model="nome">
+
+    <h1>{{nome}}</h1>
+</div>
+
+<script>
+    //var CtrlApp = function (s) {
+    //    s.nome = "Glaicon";
+    //};
+
+    //CtrlApp.$inject = ['$scope'];
+
+
+    angular.module('app', [])
+            .controller('CtrlApp', ['$scope', function (s) {
+                s.nome = "Glaicon";
+            }]);
+
+</script>
+
+</body>
+</html>

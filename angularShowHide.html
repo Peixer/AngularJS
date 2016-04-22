@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body>
+
+<input type="checkbox" ng-model="deveMostrar">Mostra
+<div ng-show="deveMostrar" ng-hide="deveEsconderTodos">
+    Check mostrar foi selecionado
+</div>
+
+<input type="checkbox" ng-model="deveEsconder">Esconde
+<div ng-show="deveEsconder" ng-hide="deveEsconderTodos">
+    Check esconder foi selecionado
+</div>
+
+
+<input type="checkbox" ng-model="deveEsconderTodos">Esconder todos
+</body>
+</html>
